@@ -1,0 +1,152 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background-color:#333;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav-links {
+    list-style:none;
+    display:flex;
+}
+
+.nav-links li {
+    margin-left:20px;
+}
+
+.nav-links a {
+    color:rgb(249, 5, 5);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu-toggle {
+    display:none;
+    cursor:pointer;
+}
+
+/* Hero */
+.hero {
+    height:100vh;
+    background:linear-gradient(to right, #6a11cb, #2575fc);
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero span { color:#ffd700; }
+
+.hero button {
+    padding:10px 20px;
+    margin-top:20px;
+    background-color:white;
+    color:#2575fc;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.hero button:hover { background-color:#f0f0f0; }
+
+/* Sobre */
+.about-page, .contact-page, .projects-page {
+    padding:80px 50px;
+    text-align:center;
+}
+
+.perfil-img {
+    width:200px;
+    border-radius:50%;
+    margin:20px 0;
+}
+
+/* Projetos */
+.cards {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card {
+    background-color:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    width:250px;
+    transition:transform 0.3s ease;
+}
+
+.card img {
+    width:100%;
+    border-radius:10px;
+}
+
+.card:hover { transform:translateY(-10px); }
+
+/* Formulário */
+form {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    max-width:400px;
+    margin:auto;
+}
+
+input, textarea {
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button[type="submit"] {
+    background-color:#2575fc;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button[type="submit"]:hover { background-color:#6a11cb; }
+
+/* Footer */
+footer {
+    text-align:center;
+    padding:20px;
+    background-color:#333;
+    color:white;
+}
+
+/* Responsivo */
+@media(max-width:768px){
+    .nav-links {
+        display:none;
+        flex-direction:column;
+        gap:10px;
+        background-color:#333;
+        position:absolute;
+        top:60px;
+        right:50px;
+        padding:20px;
+        border-radius:10px;
+    }
+    .nav-links.active { display:flex; }
+    .menu-toggle { display:block; }
+}
